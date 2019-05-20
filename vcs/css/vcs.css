@@ -1,0 +1,27 @@
+body  {background-image: url(../images/darkbg.jpg); color: #000066;}
+.patuaOne {font-family: 'Patua One', cursive;}
+.lato     {font-family: 'Lato', sans-serif;}
+
+.headdiv {grid-area: head; border-radius: 20px;}
+.bodydiv {grid-area: body; border-radius: 20px;}
+
+.grid-container {
+    background-image: url(../images/lightbg.jpeg);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    border-radius: 20px;
+    margin: 20px;
+    grid-template-areas:
+      'head'
+      'body';
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  .grid-container>div {
+    background-color: #ffffb3;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #000040;
+    padding: 20px 0;
+  }
+
