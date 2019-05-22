@@ -1,0 +1,76 @@
+body  {background-image: url(../images/darkbg.jpg); color: #000066;}
+.patuaOne {font-family: 'Patua One', cursive;}
+.lato     {font-family: 'Lato', sans-serif;}
+
+.headdiv {grid-area: head; border-radius: 20px;}
+.bodydiv {grid-area: body; border-radius: 20px;}
+
+.grid-container {
+    background-image: url(../images/lightbg.jpeg);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    border-radius: 20px;
+    margin: 20px;
+    grid-template-areas:
+      'head'
+      'body';
+    grid-gap: 20px;
+    padding: 20px;
+    width: 75%
+  }
+  .grid-container>div {
+    background-color: #ffffb3;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #000040;
+    padding: 20px 0;
+  }
+  * {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+  float: right;
+  padding: 20px;
+  margin-right: 30%;
+  margin-top: 10px;
+}
+input {
+  background-color: #00CFCF;
+  border: 2px solid #000066;
+  color: #000066;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 #000055, 0 1px 5px 0 #0000CC;
+}
+input:hover{
+    background-color: #00C0C0;
+    box-shadow: 0 2px 1px 0 #000055, 0 1px 1px 0 #0000CC;
+}
+#fileDisplayArea {
+  margin-top: 2em;
+  overflow: auto;
+  width: 600px;
+}
+#myimage{
+  width: 600px;
+}
