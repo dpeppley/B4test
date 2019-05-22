@@ -27,11 +27,117 @@
                     one single place for the full version history of the software as is common in once-popular version
                     control systems like CVS or Subversion (also known as SVN), in Git, every developer's working copy
                     of the code is also a repository that can contain the full history of all changes.</i></p>
-                    <h2>Create repo</h2>
-                    <p>Home page -> create repository -> name/desc -> upload files -> drag and drop -> commit</p>
-                    <h2>Git</h2>
-                    <p>git -- version -> git config --global user.name "" -> git config --global user.email "" -> git config -- list (check)</p>
-
+            <h2>Create repo</h2>
+            <p>Home page -> create repository -> name/desc -> upload files -> drag and drop -> commit</p>
+            <h2>Git</h2>
+            <p>Linux</p>
+            <p>--Navitage to desired folder first</p>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac</b></font>$ sudo apt update
+                    </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac</b></font>$ sudo apt install git
+                    </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac</b></font>$ git --version
+                    </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git config --global user.name &quot;[GitHub username]&quot;</pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git config --global user.email &quot;[GitHub email]&quot;
+            </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git init
+                    </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ cd .git
+                        <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs/.git</b></font>$ ll
+                        total 40
+                        drwxr-xr-x 7 compsci compsci 4096 May 22 13:41 <font color="#729FCF"><b>.</b></font>/
+                        drwx------ 7 compsci compsci 4096 May 22 13:41 <font color="#729FCF"><b>..</b></font>/
+                        drwxr-xr-x 2 compsci compsci 4096 May 22 13:41 <font color="#729FCF"><b>branches</b></font>/
+                        -rw-r--r-- 1 compsci compsci   92 May 22 13:41 config
+                        -rw-r--r-- 1 compsci compsci   73 May 22 13:41 description
+                        -rw-r--r-- 1 compsci compsci   23 May 22 13:41 HEAD
+                        drwxr-xr-x 2 compsci compsci 4096 May 22 13:41 <font color="#729FCF"><b>hooks</b></font>/
+                        drwxr-xr-x 2 compsci compsci 4096 May 22 13:41 <font color="#729FCF"><b>info</b></font>/
+                        drwxr-xr-x 4 compsci compsci 4096 May 22 13:41 <font color="#729FCF"><b>objects</b></font>/
+                        drwxr-xr-x 4 compsci compsci 4096 May 22 13:41 <font color="#729FCF"><b>refs</b></font>/
+                        </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs/.git</b></font>$ cd ../
+                            <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ rm -rf .git
+                            <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ ll
+                            total 28
+                            drwx------  6 compsci compsci 4096 May 22 13:47 <font color="#729FCF"><b>.</b></font>/
+                            drwx------ 33 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>..</b></font>/
+                            drwx------  2 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>css</b></font>/
+                            drwx------  2 compsci compsci 4096 May 20 13:13 <font color="#729FCF"><b>images</b></font>/
+                            -rw-rw-r--  1 compsci compsci 2127 May 20 13:52 index.html
+                            drwx------  2 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>js</b></font>/
+                            drwx------  2 compsci compsci 4096 May 20 13:13 <font color="#729FCF"><b>video</b></font>/
+                            <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ 
+                            </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git status
+                                On branch master
+                                
+                                No commits yet
+                                
+                                Untracked files:
+                                  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+                                
+                                    <font color="#CC0000">css/</font>
+                                    <font color="#CC0000">images/</font>
+                                    <font color="#CC0000">index.html</font>
+                                    <font color="#CC0000">js/</font>
+                                
+                                nothing added to commit but untracked files present (use &quot;git add&quot; to track)</pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ touch .gitignore
+                                    <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ ll
+                                    total 32
+                                    drwx------  7 compsci compsci 4096 May 22 13:54 <font color="#729FCF"><b>.</b></font>/
+                                    drwx------ 33 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>..</b></font>/
+                                    drwx------  2 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>css</b></font>/
+                                    drwxr-xr-x  7 compsci compsci 4096 May 22 13:51 <font color="#729FCF"><b>.git</b></font>/
+                                    -rw-r--r--  1 compsci compsci    0 May 22 13:54 .gitignore
+                                    drwx------  2 compsci compsci 4096 May 20 13:13 <font color="#729FCF"><b>images</b></font>/
+                                    -rw-rw-r--  1 compsci compsci 2127 May 20 13:52 index.html
+                                    drwx------  2 compsci compsci 4096 May 20 13:14 <font color="#729FCF"><b>js</b></font>/
+                                    drwx------  2 compsci compsci 4096 May 20 13:13 <font color="#729FCF"><b>video</b></font>/
+                                    </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ gedit .gitignore
+                                        <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git status
+                                        On branch master
+                                        
+                                        No commits yet
+                                        
+                                        Untracked files:
+                                          (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+                                        
+                                            <font color="#CC0000">css/</font>
+                                            <font color="#CC0000">index.html</font>
+                                            <font color="#CC0000">js/</font>
+                                        
+                                        nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+                                        </pre>
+            <p>--Enter files you do not want to track</p>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git add -A
+                <font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git status
+                </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git status
+                    On branch master
+                    
+                    No commits yet
+                    
+                    Untracked files:
+                      (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+                    
+                        <font color="#CC0000">.gitignore</font>
+                        <font color="#CC0000">css/</font>
+                        <font color="#CC0000">index.html</font>
+                        <font color="#CC0000">js/</font>
+                    
+                    </pre>
+            <pre><font color="#8AE234"><b>compsci@compsci-VBox</b></font>:<font color="#729FCF"><b>/var/www/html/drewp_git-prac/projects/vcs</b></font>$ git commit -m &quot;[add message]&quot;
+                        [master (root-commit) 907b50a] Initial commit
+                         4 files changed, 69 insertions(+)
+                         create mode 100644 .gitignore
+                         create mode 100644 css/vcs.css
+                         create mode 100644 index.html
+                         create mode 100644 js/vcs.js
+                        </pre>
             <br>
             <h5>VCS Description <a href="https://www.atlassian.com/git/tutorials/what-is-version-control">link</a></h5>
             <h5>Git Description <a href="https://www.atlassian.com/git/tutorials/what-is-git">Link</a></h5>
