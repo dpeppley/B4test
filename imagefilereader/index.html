@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Reader</title>
+    <title>Image Reader</title>
+    <style>
+        html {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 100%;
+            background: #333;
+        }
+
+        #page-wrapper {
+            width: 800px;
+            background: #FFF;
+            padding: 1em;
+            margin: 1em auto;
+            min-height: 300px;
+            border-top: 5px solid #00C3FF;
+            box-shadow: 0 2px 10px #00000008;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        #fileDisplayArea {
+            margin-top: 2em;
+            width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <h1>Drew Peppley -- File Image Reader -- April 2019</h1>
+        <div>
+            Select an image file:
+            <input type="file" id="fileInput">
+        </div>
+        <div id="fileDisplayArea"></div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var fileInput = document.getElementById('fileInput');
+            var fileDisplayArea = document.getElementById('fileDisplayArea');
+            console.log("function reached");
+            fileInput.addEventListener('change', function(e){
+                var file = fileInput.files[0];
+                var imageType = /image.*/;
+                console.log("step 1 complete");
+                if(file.type.match(imageType)){
+                    var reader = new FileReader();
+                    console.log("step 2 complete");
+                    reader.onload = function(e){
+                        fileDisplayArea.innerHTML = "";
+                        var img = new Image();
+                        img.src = reader.result;
+                        fileDisplayArea.appendChild(img);
+                        console.log("complete");
+                    }
+
+                    reader.readAsDataURL(file);
+                } else {
+                    fileDisplayArea.innerHTML = "File type not supported";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

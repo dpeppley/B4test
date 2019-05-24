@@ -1,0 +1,63 @@
+body  {background-image: url(../images/darkbg.jpg); color: #000066;}
+.patuaOne {font-family: 'Patua One', cursive;}
+.lato     {font-family: 'Lato', sans-serif;}
+
+.headldiv {grid-area: headl; border-radius: 20px; text-align: left;}
+.headmdiv {grid-area: headm; border-radius: 20px; text-align: center;}
+.headrdiv {grid-area: headr; border-radius: 20px; text-align: right;}
+.bodydiv {grid-area: body; border-radius: 20px;}
+.elediv  {grid-area: ele; border-radius: 20px;}
+.topwidth{
+  width: 95%
+}
+.grid-container {
+    background-image: url(../images/lightbg.jpeg);
+    display: grid;
+    grid-template-columns: 3fr 3fr 1.5fr;
+    grid-template-rows: auto;
+    border-radius: 20px;
+    margin: 20px;
+    grid-template-areas:
+      'headl headm headr'
+      'body  body  body'
+      'ele   ele   ele';
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  .grid-container>div {
+    background-color: #ffffb3;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #000066;
+    padding: 20px 0;
+  }
+
+h1{color: #000066;}
+h3{color: #000066;}
+
+input{
+  border: none;
+  border-bottom: 2px solid #000066;
+  background-color: #00000000;
+  color: #000066;
+}
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid #000066;
+  background-color: #00000000;
+  font-size: 16pt;
+}
+input[type=text]:focus {
+  box-shadow: 3px 2px 15px 3px #000055, 0 1px 5px 0 #0000CC;
+}
+input[type=text]:hover{
+  box-shadow: 0 2px 1px 0 #000055, 0 1px 1px 0 #0000CC;
+}
+.yellow{
+  background-color: #FFFFB3;
+}
+.yellowText{
+  color: #FFFFB3;
+}
+.blue{
+  color: #000066;
+}
